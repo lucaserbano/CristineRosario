@@ -56,7 +56,7 @@
   <nav class="fixed top-0 w-full z-50 bg-[#F3FDFF] shadow-[0_2px_20px_rgba(0,30,47,0.07)]">
     <div class="flex justify-between items-center w-full px-8 py-2 max-w-7xl mx-auto">
       <a href="index.html" class="-ml-3">
-        <img src="assets/logo/Logo-navbar-rodape.png" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
+        <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Início</a>
@@ -79,7 +79,7 @@
     </div>
   </nav>
 
-  <div id="mobile-menu" class="mobile-menu fixed top-[88px] left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
+  <div id="mobile-menu" class="mobile-menu fixed top-32 left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
     <div class="flex flex-col items-center gap-6 py-8">
       <a href="index.html" class="text-secondary text-lg">Início</a>
       <a href="sobre.html" class="text-secondary text-lg">Sobre</a>
@@ -96,7 +96,7 @@
   <main>
 
     <!-- HEADER -->
-    <section class="pt-40 pb-16 bg-surface-container-low pattern-overlay-2 overflow-hidden">
+    <section class="min-h-[540px] pt-52 pb-16 bg-surface-container-low pattern-pub-header overflow-hidden">
       <div class="max-w-7xl mx-auto px-8">
         <p class="hero-entrance hero-entrance-1 text-secondary font-semibold tracking-widest text-sm mb-4">ARTIGOS E ORIENTAÇÕES</p>
         <h1 class="hero-entrance hero-entrance-2 text-6xl md:text-7xl font-headline text-primary leading-tight mb-4">
@@ -109,67 +109,71 @@
     </section>
 
     <!-- ARTICLES -->
-    <!-- TODO: adicionar artigos reais aqui seguindo o padrão de cards abaixo -->
     <section class="py-24 bg-background watermark-logo-giant overflow-hidden">
       <div class="max-w-7xl mx-auto px-8">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <article class="reveal group cursor-pointer card-hover">
-            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
-              <img src="assets/images/foto-procedimento.jpg" alt="Teste de alergia cutâneo" class="w-full h-full object-cover" />
-            </div>
-            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Pele &amp; Alergia</span>
-            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
-              Mitos e verdades sobre a Dermatite Atópica
-            </h3>
+          <article class="reveal group card-hover">
+            <a href="artigo-alergia-ocular.html" class="block">
+              <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+                <img src="assets/images/foto-lupa.jpg" alt="Alergia ocular" class="w-full h-full object-cover" />
+              </div>
+            </a>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Olhos &amp; Alergia</span>
+            <a href="artigo-alergia-ocular.html">
+              <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
+                Alergia Ocular: do incômodo diário ao risco à visão
+              </h3>
+            </a>
             <p class="text-on-surface-variant text-sm mb-6 line-clamp-3 leading-relaxed">
-              Entenda por que o banho excessivo pode ser um vilão e como escolher os hidratantes certos para a pele atópica do seu filho...
+              Coceira, vermelhidão e lacrimejamento constantes são sinais de alergia ocular — uma condição muito mais séria do que parece. Sem tratamento adequado, pode comprometer permanentemente a visão.
             </p>
-            <span class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
+            <a href="artigo-alergia-ocular.html" class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
               Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
-            </span>
+            </a>
           </article>
 
-          <article class="reveal group cursor-pointer card-hover" data-delay="150">
-            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
-              <img src="assets/images/foto-publicacoes.jpg" alt="Dra. Cristine Rosário pesquisando" class="w-full h-full object-cover" />
-            </div>
-            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Imunologia</span>
-            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
-              Como fortalecer a imunidade escolar
-            </h3>
+          <article class="reveal group card-hover" data-delay="150">
+            <a href="artigo-rinite.html" class="block">
+              <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+                <img src="assets/images/foto-publicacoes.jpg" alt="Rinite alérgica" class="w-full h-full object-cover" />
+              </div>
+            </a>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Respiratório</span>
+            <a href="artigo-rinite.html">
+              <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
+                Rinite Alérgica: muito mais do que espirros
+              </h3>
+            </a>
             <p class="text-on-surface-variant text-sm mb-6 line-clamp-3 leading-relaxed">
-              Dicas práticas para preparar o sistema imunológico para a volta às aulas e o convívio em grupo com outras crianças...
+              Espirros, coriza e coceira constantes podem ser rinite alérgica — e quando não tratada, afeta o sono, o aprendizado e o humor em qualquer fase da vida.
             </p>
-            <span class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
+            <a href="artigo-rinite.html" class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
               Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
-            </span>
+            </a>
           </article>
 
-          <article class="reveal group cursor-pointer card-hover" data-delay="300">
-            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
-              <img src="assets/images/foto-lupa.jpg" alt="Investigação clínica" class="w-full h-full object-cover" />
-            </div>
-            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Alimentação</span>
-            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
-              Introdução alimentar em alérgicos
-            </h3>
+          <article class="reveal group card-hover" data-delay="300">
+            <a href="artigo-urticaria.html" class="block">
+              <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+                <img src="assets/images/foto-procedimento.jpg" alt="Urticária" class="w-full h-full object-cover" />
+              </div>
+            </a>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Pele &amp; Imunidade</span>
+            <a href="artigo-urticaria.html">
+              <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">
+                Você sabia que nem sempre a urticária está relacionada com a alergia?
+              </h3>
+            </a>
             <p class="text-on-surface-variant text-sm mb-6 line-clamp-3 leading-relaxed">
-              O passo a passo seguro para apresentar novos alimentos a bebês com histórico de alergias familiares...
+              A urticária crônica raramente tem causa alérgica. Entenda por que o diagnóstico é clínico, como evitar exames desnecessários e quais tratamentos modernos podem transformar sua qualidade de vida.
             </p>
-            <span class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
+            <a href="artigo-urticaria.html" class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
               Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
-            </span>
+            </a>
           </article>
 
-        </div>
-
-        <!-- Placeholder message -->
-        <div class="reveal mt-16 py-16 bg-surface-container-low rounded-[2rem] text-center border border-outline-variant/20">
-          <span class="material-symbols-outlined text-5xl text-outline-variant block mb-4">edit_note</span>
-          <p class="text-on-surface-variant font-medium">Mais artigos em breve.</p>
-          <p class="text-on-surface-variant text-sm mt-2">Novos conteúdos serão publicados regularmente.</p>
         </div>
 
       </div>
@@ -183,16 +187,16 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div class="space-y-5">
           <a href="index.html" class="-ml-3 inline-block">
-            <img src="assets/logo/Logo-navbar-rodape.png" alt="Cristine Rosário" class="h-28 w-auto" />
+            <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário" class="h-28 w-auto" />
           </a>
-          <div class="text-xs text-on-surface-variant space-y-1 leading-relaxed">
+          <div class="text-sm text-on-surface-variant space-y-1 leading-relaxed">
             <p>CRM-PR 29.253</p>
             <p>Pediatria · RQE Nº 21.533</p>
             <p>Alergia e Imunologia · RQE Nº 21.532</p>
           </div>
-          <div class="flex items-center gap-2 text-xs text-on-surface-variant pt-1">
+          <div class="flex items-center gap-2 text-sm text-on-surface-variant pt-1">
             <span class="material-symbols-outlined text-sm text-secondary">schedule</span>
-            <span>Seg–Sex · 09h às 17h</span>
+            <span class="font-bold">Seg–Sex · 09h às 17h</span>
           </div>
         </div>
         <div>

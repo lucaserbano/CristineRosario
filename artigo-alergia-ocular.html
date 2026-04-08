@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A alergia ocular vai muito além do incômodo — pode comprometer permanentemente a visão. Conheça tipos, causas, tratamentos e cuidados preventivos — por Dra. Cristine Rosário." />
+
+  <title>Alergia Ocular | Dra. Cristine Rosário</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary":                  "#001E2F",
+            "secondary":                "#3B6E8A",
+            "tertiary-fixed-dim":       "#FFBCBD",
+            "on-tertiary-fixed":        "#340F12",
+            "background":               "#F3FDFF",
+            "surface":                  "#F3FDFF",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low":    "#EBF9FF",
+            "surface-container":        "#DCEFF8",
+            "surface-container-high":   "#C5E4F2",
+            "surface-container-highest":"#B0D6EC",
+            "on-surface":               "#001E2F",
+            "on-surface-variant":       "#3A5A70",
+            "secondary-container":      "#C5E4F2",
+            "secondary-fixed":          "#DCEFF8",
+            "secondary-fixed-dim":      "#9CCDE6",
+            "on-secondary-fixed":       "#001E2F",
+            "outline":                  "#6A9AB5",
+            "outline-variant":          "#AECFE3",
+          },
+          fontFamily: {
+            "headline": ["Miller Banner", "Newsreader", "Georgia", "serif"],
+            "body":     ["Raleway", "sans-serif"],
+            "label":    ["Raleway", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/animations.js" defer></script>
+</head>
+
+<body class="bg-background font-body text-on-surface">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#F3FDFF] shadow-[0_2px_20px_rgba(0,30,47,0.07)]">
+    <div class="flex justify-between items-center w-full px-8 py-2 max-w-7xl mx-auto">
+      <a href="index.html" class="-ml-3">
+        <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Início</a>
+        <a href="sobre.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Sobre</a>
+        <a href="publicacoes.html" class="text-primary border-b border-primary pb-1 text-sm tracking-wide font-medium">Publicações</a>
+        <a href="contato.html"     class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Contato</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium btn-hover">
+          Agendar consulta
+        </a>
+        <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu fixed top-32 left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
+    <div class="flex flex-col items-center gap-6 py-8">
+      <a href="index.html" class="text-secondary text-lg">Início</a>
+      <a href="sobre.html" class="text-secondary text-lg">Sobre</a>
+      <a href="publicacoes.html" class="text-primary text-lg font-medium">Publicações</a>
+      <a href="contato.html" class="text-secondary text-lg">Contato</a>
+      <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+         target="_blank" rel="noopener"
+         class="bg-primary text-white px-8 py-3 rounded-full font-medium btn-hover">
+        Agendar consulta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ARTICLE HERO -->
+    <section class="pt-52 pb-16 bg-surface-container-low pattern-pub-header overflow-hidden">
+      <div class="max-w-3xl mx-auto px-8">
+        <a href="publicacoes.html" class="hero-entrance hero-entrance-1 inline-flex items-center gap-2 text-secondary text-sm font-medium hover:text-primary transition-colors mb-8 group">
+          <span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          Voltar às publicações
+        </a>
+        <div class="hero-entrance hero-entrance-1 flex items-center gap-3 mb-6">
+          <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest">Olhos &amp; Alergia</span>
+          <span class="w-1 h-1 rounded-full bg-outline-variant inline-block"></span>
+          <span class="text-xs text-on-surface-variant">8 min de leitura</span>
+        </div>
+        <h1 class="hero-entrance hero-entrance-2 text-4xl md:text-5xl lg:text-6xl font-headline text-primary leading-tight mb-6">
+          Alergia Ocular: do incômodo diário ao <span class="italic text-secondary">risco à visão</span>
+        </h1>
+        <p class="hero-entrance hero-entrance-3 text-lg text-on-surface-variant leading-relaxed font-headline italic">
+          Coceira, vermelhidão e lacrimejamento constantes são sinais de alergia ocular — uma condição muito mais séria do que parece. Sem tratamento adequado, pode comprometer permanentemente a visão.
+        </p>
+        <div class="hero-entrance hero-entrance-4 flex items-center gap-3 mt-8 pt-8 border-t border-outline-variant/20">
+          <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings:'FILL' 1">person</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-primary">Dra. Cristine Rosário</p>
+            <p class="text-xs text-on-surface-variant">Médica Alergista e Imunologista · CRM-PR 29.253</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="py-20 bg-background">
+      <div class="max-w-3xl mx-auto px-8">
+
+        <div class="space-y-8 text-on-surface-variant leading-relaxed text-[1.0625rem]">
+
+          <p>
+            A <strong class="text-primary font-semibold">alergia ocular</strong> pode acometer qualquer idade, de crianças a idosos. Geralmente está associada à rinite, à asma e à dermatite atópica, mas também pode ocorrer de forma isolada. Apesar de ser um problema de saúde pública — acometendo cerca de <strong class="text-primary font-semibold">40% da população mundial</strong> — ainda é pouco valorizada tanto por pacientes quanto por médicos.
+          </p>
+
+          <p>
+            Os problemas causados pela alergia ocular podem ser leves em algumas pessoas e <strong class="text-primary font-semibold">graves</strong> em outras, interferindo na capacidade visual, no rendimento escolar ou no trabalho e, mais raramente, com a possibilidade de <strong class="text-primary font-semibold">danos permanentes à visão</strong>.
+          </p>
+
+          <!-- Impacto -->
+          <div class="bg-surface-container-low rounded-2xl p-6 border-l-4 border-tertiary-fixed-dim my-10">
+            <p class="text-primary font-semibold font-headline text-lg mb-2">Impacto na qualidade de vida</p>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Alterações mentais como baixa autoestima, ansiedade e depressão afetam adolescentes e crianças, enquanto adultos apresentam queda na produtividade, interferência nas atividades do dia a dia e distúrbios do sono. O aspecto avermelhado dos olhos pode gerar constrangimento social e afetar a rotina em qualquer idade.
+            </p>
+          </div>
+
+          <!-- Sintomas -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-6">Sinais e sintomas mais frequentes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">back_hand</span>
+                <span class="text-sm">Prurido ocular e periocular (coceira nos olhos)</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">visibility</span>
+                <span class="text-sm">Hiperemia conjuntival (vermelhidão)</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">water_drop</span>
+                <span class="text-sm">Lacrimejamento e secreção ocular clara</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">blur_on</span>
+                <span class="text-sm">Visão embaçada e sensação de corpo estranho</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">light_mode</span>
+                <span class="text-sm">Sensibilidade à luz (fotofobia)</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">airline_seat_flat</span>
+                <span class="text-sm">Inchaço das pálpebras e olheiras</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tipos -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-6">Tipos de alergia ocular</h2>
+            <div class="space-y-4">
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Conjuntivite Alérgica Perene</h3>
+                <p class="text-sm leading-relaxed">Sintomas durante o ano todo, provocados por alérgenos domiciliares como <strong class="text-primary font-semibold">ácaros</strong>, epitélios de cão e gato e mofos. Forte associação com rinite alérgica.</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Conjuntivite Alérgica Sazonal</h3>
+                <p class="text-sm leading-relaxed">Sintomas em determinadas épocas do ano, durante a <strong class="text-primary font-semibold">estação dos pólens</strong> — especialmente na primavera na região sul do Brasil.</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6 bg-surface-container-low">
+                <h3 class="font-headline text-primary text-lg mb-2">Ceratoconjuntivite Vernal <span class="text-sm text-secondary font-body font-normal">(forma grave)</span></h3>
+                <p class="text-sm leading-relaxed">Acomete crianças e adolescentes em países de clima quente e seco. Pode envolver a córnea com risco de <strong class="text-primary font-semibold">perda visual permanente</strong>.</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6 bg-surface-container-low">
+                <h3 class="font-headline text-primary text-lg mb-2">Ceratoconjuntivite Atópica <span class="text-sm text-secondary font-body font-normal">(forma grave)</span></h3>
+                <p class="text-sm leading-relaxed">Acomete principalmente adultos. Associação com <strong class="text-primary font-semibold">dermatite atópica</strong> em mais de 90% dos casos.</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Dermatoconjuntivite de Contato</h3>
+                <p class="text-sm leading-relaxed">Dermatite nas pálpebras causada principalmente por cosméticos, colírios, conservantes e soluções para limpeza de lentes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Causas -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Principais causas: os aeroalérgenos</h2>
+            <p>
+              A maioria dos casos resulta de uma <strong class="text-primary font-semibold">predisposição genética (atopia)</strong> aliada à exposição a fatores ambientais. Os <strong class="text-primary font-semibold">aeroalérgenos</strong> — substâncias dispersas no ar — são as causas mais relacionadas ao desencadeamento:
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-center gap-3 text-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+                <span><strong class="text-primary font-semibold">Ácaros</strong> — os alérgenos mais comuns, invisíveis ao olho nu</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+                <span>Fungos (mofos)</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+                <span>Epitélios de animais — cães, gatos e outros</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm">
+                <span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0"></span>
+                <span><strong class="text-primary font-semibold">Pólens</strong> — especialmente na região sul do Brasil, na primavera</span>
+              </li>
+            </ul>
+
+            <!-- Ácaros destaque -->
+            <div class="mt-8 bg-primary rounded-2xl p-6 text-white">
+              <h3 class="font-headline text-lg text-tertiary-fixed-dim mb-3">Sabia que existem 1.000 ácaros por grama de poeira doméstica?</h3>
+              <p class="text-white/75 text-sm leading-relaxed">
+                Ácaros são aracnídeos que habitam a poeira das casas, alimentando-se da descamação da pele humana e animal. São invisíveis ao olho nu e sobrevivem melhor em ambientes escuros e úmidos. Cada ácaro produz de 20 a 40 bolotas de fezes por dia, que contêm a enzima <em>"Der p 1"</em> — altamente alergênica e capaz de permanecer ativa por longo tempo no ambiente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Medidas de controle -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Medidas de controle ambiental</h2>
+            <p class="mb-6">Reduzir a exposição aos alérgenos é o passo mais eficaz do tratamento. Veja as principais medidas:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">wb_sunny</span>
+                <span>Abra as janelas e deixe o sol entrar — ácaros não sobrevivem à luz.</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">cleaning_services</span>
+                <span>Limpe a casa diariamente com pano úmido, na ausência do alérgico.</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">bed</span>
+                <span>Use capas impermeáveis para travesseiros e colchões. Lave roupas de cama em temperatura elevada (&gt;55°C).</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">pets</span>
+                <span>Evite animais de estimação. Se já os tiver, não deixe que subam nas camas e dê banho periodicamente.</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">curtains</span>
+                <span>Retire tapetes e carpetes. Prefira persianas ou materiais que possam ser limpos com pano úmido.</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 text-sm">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">water_damage</span>
+                <span>Combata focos de umidade e mofo. Vasamentos e infiltrações devem ser consertados.</span>
+              </div>
+            </div>
+            <p class="mt-4 bg-surface-container rounded-xl p-4 text-sm border border-outline-variant/20">
+              <strong class="text-primary">Para alérgicos em áreas polínicas:</strong> mantenha janelas fechadas durante o dia na primavera, evite secar roupas ao ar livre e use óculos e máscara nos dias com vento.
+            </p>
+          </div>
+
+          <!-- Tratamento -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Tratamento: três pilares fundamentais</h2>
+            <div class="space-y-4">
+              <div class="bg-surface-container rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">1. Medidas preventivas gerais</h3>
+                <p class="text-sm leading-relaxed">Indicadas para evitar o aparecimento dos sintomas, com controle ambiental de alérgenos.</p>
+              </div>
+              <div class="bg-surface-container rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">2. Medicamentos</h3>
+                <p class="text-sm leading-relaxed">
+                  <strong class="text-primary font-semibold">Colírios</strong> são os medicamentos mais indicados para alergia ocular — existem vários tipos, escolhidos conforme a frequência e intensidade dos sintomas. Para casos mais graves, podem ser usados corticoides por períodos curtos, imunossupressores como a ciclosporina e até <strong class="text-primary font-semibold">imunobiológicos</strong> como o anti-IgE.
+                </p>
+              </div>
+              <div class="bg-primary rounded-2xl p-6 text-white">
+                <h3 class="font-headline text-lg text-tertiary-fixed-dim mb-2">3. Imunoterapia (vacina de alérgenos)</h3>
+                <p class="text-white/75 text-sm leading-relaxed">
+                  Tem como objetivo aumentar a tolerância do indivíduo aos alérgenos identificados nos testes alérgicos. É um tratamento eficiente com <strong class="text-white font-semibold">efeito prolongado</strong> mesmo após sua interrupção. Deve ser personalizado e realizado por 3 a 5 anos, sob supervisão do alergista.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colírios -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Colírios: passo a passo para o uso correto</h2>
+            <p class="mb-6 text-sm">Colírios não são todos iguais — e o uso incorreto reduz sua eficácia. Siga estas orientações:</p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">1</span>
+                <span>Lave bem as mãos antes de aplicar. Confirme a validade e o produto correto.</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">2</span>
+                <span>Incline a cabeça para trás, puxe a pálpebra inferior e pingue <strong class="text-primary font-semibold">uma gota</strong> na "bolsa" formada.</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">3</span>
+                <span>Não toque o bico do colírio nos olhos ou pálpebras para evitar contaminação.</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">4</span>
+                <span>Pressione levemente o canto interno do olho por 1 minuto para aumentar a absorção.</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">5</span>
+                <span>Se usar lentes de contato, retire-as antes e recoloque após <strong class="text-primary font-semibold">15 minutos</strong>.</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-semibold flex-shrink-0 mt-0.5 text-xs">6</span>
+                <span>Se usar dois colírios diferentes, aguarde <strong class="text-primary font-semibold">5 a 10 minutos</strong> entre eles.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ceratocone -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Atenção ao ceratocone</h2>
+            <div class="bg-surface-container-low rounded-2xl p-6 border-l-4 border-secondary">
+              <p class="text-sm leading-relaxed">
+                O ato de <strong class="text-primary font-semibold">coçar os olhos</strong> intensamente — muito comum nas alergias oculares crônicas — pode contribuir para o aparecimento e progressão do <strong class="text-primary font-semibold">ceratocone</strong>: um afinamento da córnea que assume forma de cone, causando alto grau de astigmatismo e comprometimento visual. Costuma ser diagnosticado na adolescência. O controle da alergia é a melhor medida preventiva. Nos casos avançados, pode ser necessário transplante de córnea.
+              </p>
+            </div>
+          </div>
+
+          <!-- Polinose -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Polinose: a alergia da primavera no Sul do Brasil</h2>
+            <p>
+              A <strong class="text-primary font-semibold">polinose</strong> é a alergia estacional relacionada à exposição aos pólens, que ocorre especialmente nos estados do Paraná, Santa Catarina e Rio Grande do Sul durante a primavera. Os sintomas — olhos avermelhados, coçando e lacrimejando, associados a espirros e coriza — repetem-se na mesma época a cada ano.
+            </p>
+            <p class="mt-6">
+              O principal alérgeno no Brasil é o <em>Lolium multiflorum</em> (azevém anual), que cresce em bordas de estradas, terrenos baldios e parques. Os sintomas tendem a <strong class="text-primary font-semibold">piorar nos dias quentes, secos e com vento</strong> — especialmente nas primeiras horas da manhã — e melhoram em dias de chuva ou neblina.
+            </p>
+            <p class="mt-6">
+              O tratamento inclui medidas preventivas, antialérgicos (em comprimidos ou colírios), sprays nasais com corticosteroide e, nos casos indicados, <strong class="text-primary font-semibold">imunoterapia</strong> com extratos polínicos padronizados — com eficácia duradoura mesmo após a suspensão do tratamento.
+            </p>
+          </div>
+
+          <!-- Aviso -->
+          <div class="mt-10 bg-surface-container rounded-2xl p-6 border border-outline-variant/30">
+            <p class="text-sm leading-relaxed">
+              <strong class="text-primary font-semibold">A automedicação pode ser perigosa:</strong> o uso incorreto de colírios pode causar catarata, aumento da pressão intraocular e maior suscetibilidade a infecções. É fundamental seguir o tratamento sempre com orientação dos especialistas em <strong class="text-primary font-semibold">Alergia e Oftalmologia</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="mt-16 pt-10 border-t border-outline-variant/20 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+          <a href="publicacoes.html" class="flex items-center gap-2 text-sm font-medium text-secondary hover:text-primary transition-colors group">
+            <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            Ver todas as publicações
+          </a>
+          <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-sm font-medium btn-hover">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">chat</span>
+            Agendar consulta
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-primary overflow-hidden">
+      <div class="reveal scale-in max-w-3xl mx-auto px-8 text-center space-y-6">
+        <h2 class="text-4xl font-headline text-white">Seus olhos merecem <span class="italic text-tertiary-fixed-dim">atenção especializada</span></h2>
+        <p class="text-secondary-fixed-dim leading-relaxed">A alergia ocular tem tratamento — e quanto antes diagnosticada, menores os riscos. Agende sua consulta.</p>
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-tertiary-fixed-dim text-on-tertiary-fixed px-10 py-4 rounded-full font-bold btn-hover shadow-lg">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+          Falar pelo WhatsApp: (41) 99995-7010
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#F3FDFF] pattern-overlay-1 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 pt-16 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="space-y-5">
+          <a href="index.html" class="-ml-3 inline-block">
+            <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário" class="h-28 w-auto" />
+          </a>
+          <div class="text-sm text-on-surface-variant space-y-1 leading-relaxed">
+            <p>CRM-PR 29.253</p>
+            <p>Pediatria · RQE Nº 21.533</p>
+            <p>Alergia e Imunologia · RQE Nº 21.532</p>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface-variant pt-1">
+            <span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+            <span class="font-bold">Seg–Sex · 09h às 17h</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Navegação</h4>
+          <ul class="space-y-3 text-sm text-secondary">
+            <li><a href="index.html"       class="hover:text-primary transition-colors">Início</a></li>
+            <li><a href="sobre.html"       class="hover:text-primary transition-colors">Sobre</a></li>
+            <li><a href="publicacoes.html" class="hover:text-primary transition-colors">Publicações</a></li>
+            <li><a href="contato.html"     class="hover:text-primary transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Clínica Prof. Dr. Nelson Rosário</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Tenente+João+Gomes+da+Silva,+226,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Ten. João Gomes da Silva, 226 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554133394486" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3339-4486
+            </a>
+            <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">chat</span>WhatsApp: (41) 99995-7010
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Hospital N. S. das Graças</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Profa.+Rosa+Saporski,+229,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Profa. Rosa Saporski, 229 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554132406521" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3240-6521
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-center border-t border-outline-variant/10">
+        <p class="text-xs text-on-surface-variant">
+          © 2025–2026 Dra. Cristine Rosário — Todos os direitos reservados.
+          CRM-PR 29.253 · Pediatria RQE Nº 21.533 · Alergia e Imunologia RQE Nº 21.532
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

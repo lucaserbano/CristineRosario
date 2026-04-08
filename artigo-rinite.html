@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A rinite alérgica afeta sono, aprendizado e qualidade de vida. Conheça os sintomas, tipos e o caminho para um tratamento eficaz — por Dra. Cristine Rosário." />
+
+  <title>Rinite Alérgica | Dra. Cristine Rosário</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary":                  "#001E2F",
+            "secondary":                "#3B6E8A",
+            "tertiary-fixed-dim":       "#FFBCBD",
+            "on-tertiary-fixed":        "#340F12",
+            "background":               "#F3FDFF",
+            "surface":                  "#F3FDFF",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low":    "#EBF9FF",
+            "surface-container":        "#DCEFF8",
+            "surface-container-high":   "#C5E4F2",
+            "surface-container-highest":"#B0D6EC",
+            "on-surface":               "#001E2F",
+            "on-surface-variant":       "#3A5A70",
+            "secondary-container":      "#C5E4F2",
+            "secondary-fixed":          "#DCEFF8",
+            "secondary-fixed-dim":      "#9CCDE6",
+            "on-secondary-fixed":       "#001E2F",
+            "outline":                  "#6A9AB5",
+            "outline-variant":          "#AECFE3",
+          },
+          fontFamily: {
+            "headline": ["Miller Banner", "Newsreader", "Georgia", "serif"],
+            "body":     ["Raleway", "sans-serif"],
+            "label":    ["Raleway", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/animations.js" defer></script>
+</head>
+
+<body class="bg-background font-body text-on-surface">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#F3FDFF] shadow-[0_2px_20px_rgba(0,30,47,0.07)]">
+    <div class="flex justify-between items-center w-full px-8 py-2 max-w-7xl mx-auto">
+      <a href="index.html" class="-ml-3">
+        <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Início</a>
+        <a href="sobre.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Sobre</a>
+        <a href="publicacoes.html" class="text-primary border-b border-primary pb-1 text-sm tracking-wide font-medium">Publicações</a>
+        <a href="contato.html"     class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Contato</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium btn-hover">
+          Agendar consulta
+        </a>
+        <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu fixed top-32 left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
+    <div class="flex flex-col items-center gap-6 py-8">
+      <a href="index.html" class="text-secondary text-lg">Início</a>
+      <a href="sobre.html" class="text-secondary text-lg">Sobre</a>
+      <a href="publicacoes.html" class="text-primary text-lg font-medium">Publicações</a>
+      <a href="contato.html" class="text-secondary text-lg">Contato</a>
+      <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+         target="_blank" rel="noopener"
+         class="bg-primary text-white px-8 py-3 rounded-full font-medium btn-hover">
+        Agendar consulta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ARTICLE HERO -->
+    <section class="pt-52 pb-16 bg-surface-container-low pattern-pub-header overflow-hidden">
+      <div class="max-w-3xl mx-auto px-8">
+        <a href="publicacoes.html" class="hero-entrance hero-entrance-1 inline-flex items-center gap-2 text-secondary text-sm font-medium hover:text-primary transition-colors mb-8 group">
+          <span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          Voltar às publicações
+        </a>
+        <div class="hero-entrance hero-entrance-1 flex items-center gap-3 mb-6">
+          <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest">Respiratório</span>
+          <span class="w-1 h-1 rounded-full bg-outline-variant inline-block"></span>
+          <span class="text-xs text-on-surface-variant">4 min de leitura</span>
+        </div>
+        <h1 class="hero-entrance hero-entrance-2 text-4xl md:text-5xl lg:text-6xl font-headline text-primary leading-tight mb-6">
+          Rinite Alérgica: muito mais do que <span class="italic text-secondary">espirros</span>
+        </h1>
+        <p class="hero-entrance hero-entrance-3 text-lg text-on-surface-variant leading-relaxed font-headline italic">
+          Espirros, coriza e coceira constantes podem ser rinite alérgica — e quando não tratada, essa condição afeta o sono, o aprendizado e o humor em qualquer idade. Conheça seus tipos, sintomas e o caminho para um tratamento eficaz.
+        </p>
+        <div class="hero-entrance hero-entrance-4 flex items-center gap-3 mt-8 pt-8 border-t border-outline-variant/20">
+          <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings:'FILL' 1">person</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-primary">Dra. Cristine Rosário</p>
+            <p class="text-xs text-on-surface-variant">Médica Alergista e Imunologista · CRM-PR 29.253</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="py-20 bg-background">
+      <div class="max-w-3xl mx-auto px-8">
+
+        <div class="space-y-8 text-on-surface-variant leading-relaxed text-[1.0625rem]">
+
+          <p>
+            A <strong class="text-primary font-semibold">Rinite Alérgica</strong> é uma doença comum que ocorre em qualquer idade: crianças, adolescentes, adultos e idosos. Tem <strong class="text-primary font-semibold">origem genética</strong> e é acompanhada de uma inflamação da mucosa nasal desencadeada por <strong class="text-primary font-semibold">alérgenos ambientais</strong>.
+          </p>
+
+          <!-- Sintomas -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-6">Quais são os sintomas?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">air</span>
+                <span class="text-sm">Espirros repetidos, em salva</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">water_drop</span>
+                <span class="text-sm">Coriza líquida e abundante</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">back_hand</span>
+                <span class="text-sm">Coceira no nariz, olhos, ouvidos e céu da boca</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">block</span>
+                <span class="text-sm">Congestão nasal e narinas obstruídas</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">visibility</span>
+                <span class="text-sm">Olhos avermelhados, lacrimejando e coçando</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">arrow_downward</span>
+                <span class="text-sm">Gotejamento pós-nasal (pigarro ou tosse)</span>
+              </div>
+              <div class="flex items-start gap-3 bg-surface-container-low rounded-xl p-4 sm:col-span-2">
+                <span class="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">sentiment_dissatisfied</span>
+                <span class="text-sm">Alteração do olfato e do paladar</span>
+              </div>
+            </div>
+            <p class="mt-6 text-sm bg-surface-container rounded-xl p-4 border border-outline-variant/20">
+              <strong class="text-primary">Atenção:</strong> nem todos os sintomas precisam estar presentes para caracterizar a doença. Os sintomas da rinite assemelham-se a um resfriado e podem passar despercebidos, atrasando o diagnóstico e tratamento.
+            </p>
+          </div>
+
+          <!-- Complicações -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Quando não tratada, a rinite vai além do nariz</h2>
+            <p>
+              A <strong class="text-primary font-semibold">inflamação alérgica</strong>, quando não tratada adequadamente, pode se estender a outras estruturas: olhos (<strong class="text-primary font-semibold">conjuntivite</strong>), ouvidos (<strong class="text-primary font-semibold">otites</strong>), seios da face (<strong class="text-primary font-semibold">sinusite</strong>), traqueia e pulmões (tosse, bronquite ou <strong class="text-primary font-semibold">asma</strong>). Pode ainda provocar alterações da voz, olfato, apetite e audição.
+            </p>
+            <p class="mt-6">
+              Em crianças menores, a rinite favorece uma maior ocorrência de infecções como otites e sinusites, culminando no <strong class="text-primary font-semibold">uso repetido de antibióticos</strong>. Além disso, pode influenciar o humor, o sono, o descanso e o estado de ânimo da pessoa em qualquer fase da vida.
+            </p>
+          </div>
+
+          <!-- Tipos -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-6">Nem toda rinite é alérgica</h2>
+            <div class="space-y-4">
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Rinite Infecciosa</h3>
+                <p class="text-sm leading-relaxed">O exemplo clássico são os resfriados e gripes — causados por vírus e sem componente alérgico.</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Rinite Não Alérgica, Não Infecciosa</h3>
+                <p class="text-sm leading-relaxed">Inclui rinite induzida por medicamentos, rinite da gravidez, <em>rinite gustatória</em> (coriza após alimentos quentes ou apimentados) e rinite por irritantes (cheiros fortes, fumaças).</p>
+              </div>
+              <div class="border border-outline-variant/30 rounded-2xl p-6">
+                <h3 class="font-headline text-primary text-lg mb-2">Rinite Mista</h3>
+                <p class="text-sm leading-relaxed">Quando mais de uma causa está envolvida simultaneamente.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diagnóstico -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">Como é feito o diagnóstico?</h2>
+            <p>O diagnóstico da rinite alérgica é clínico, baseado em uma análise médica estruturada:</p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                <span class="text-sm leading-relaxed">Investigação da história da pessoa, suas queixas e a evolução dos sintomas ao longo do tempo.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                <span class="text-sm leading-relaxed"><strong class="text-primary font-semibold">Rinoscopia</strong>: avaliação do aspecto da mucosa nasal — se está congestionada, sua coloração e o tipo de secreção.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                <span class="text-sm leading-relaxed">Exame dos ouvidos, olhos, faringe e ausculta dos pulmões.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</span>
+                <span class="text-sm leading-relaxed"><strong class="text-primary font-semibold">Testes cutâneos</strong> para identificar e avaliar a alergia, além da dosagem da IgE total e específica no sangue.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tratamento -->
+          <div class="mt-14">
+            <h2 class="text-2xl font-headline text-primary mb-4">O tratamento vai além do alívio imediato</h2>
+            <p>
+              Tratar a rinite não significa apenas dar alívio imediato aos sintomas — significa trabalhar para que a pessoa retorne ao seu estado normal, corrigindo as consequências da doença.
+            </p>
+            <div class="mt-8 space-y-4">
+              <div class="bg-primary rounded-2xl p-6 text-white">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-2xl font-headline italic text-tertiary-fixed-dim leading-none">01</span>
+                  <h3 class="font-headline text-lg">Controle dos alérgenos</h3>
+                </div>
+                <p class="text-white/75 text-sm leading-relaxed">Identificar a causa e, se possível, afastá-la por meio de medidas de controle ambiental. É o tratamento ideal — e muitas vezes suficiente.</p>
+              </div>
+              <div class="bg-surface-container rounded-2xl p-6">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-2xl font-headline italic text-secondary leading-none">02</span>
+                  <h3 class="font-headline text-primary text-lg">Medicamentos</h3>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Escolha dos medicamentos para reduzir a inflamação e controlar os sintomas a curto e longo prazo.</p>
+              </div>
+              <div class="bg-surface-container rounded-2xl p-6">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-2xl font-headline italic text-secondary leading-none">03</span>
+                  <h3 class="font-headline text-primary text-lg">Imunoterapia (vacina de alérgenos)</h3>
+                </div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Nos casos indicados, a imunoterapia específica é capaz de aumentar a tolerância ao alérgeno com efeito prolongado mesmo após a interrupção do tratamento.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="mt-16 pt-10 border-t border-outline-variant/20 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+          <a href="publicacoes.html" class="flex items-center gap-2 text-sm font-medium text-secondary hover:text-primary transition-colors group">
+            <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            Ver todas as publicações
+          </a>
+          <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-sm font-medium btn-hover">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">chat</span>
+            Agendar consulta
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-primary overflow-hidden">
+      <div class="reveal scale-in max-w-3xl mx-auto px-8 text-center space-y-6">
+        <h2 class="text-4xl font-headline text-white">Convive com <span class="italic text-tertiary-fixed-dim">rinite?</span></h2>
+        <p class="text-secondary-fixed-dim leading-relaxed">Um diagnóstico correto abre caminho para um tratamento que vai muito além do antialérgico. Agende sua consulta.</p>
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-tertiary-fixed-dim text-on-tertiary-fixed px-10 py-4 rounded-full font-bold btn-hover shadow-lg">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+          Falar pelo WhatsApp: (41) 99995-7010
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#F3FDFF] pattern-overlay-1 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 pt-16 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="space-y-5">
+          <a href="index.html" class="-ml-3 inline-block">
+            <img src="assets/Identidade visual/Logo-navbar-certa.webp" alt="Cristine Rosário" class="h-28 w-auto" />
+          </a>
+          <div class="text-sm text-on-surface-variant space-y-1 leading-relaxed">
+            <p>CRM-PR 29.253</p>
+            <p>Pediatria · RQE Nº 21.533</p>
+            <p>Alergia e Imunologia · RQE Nº 21.532</p>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-on-surface-variant pt-1">
+            <span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+            <span class="font-bold">Seg–Sex · 09h às 17h</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Navegação</h4>
+          <ul class="space-y-3 text-sm text-secondary">
+            <li><a href="index.html"       class="hover:text-primary transition-colors">Início</a></li>
+            <li><a href="sobre.html"       class="hover:text-primary transition-colors">Sobre</a></li>
+            <li><a href="publicacoes.html" class="hover:text-primary transition-colors">Publicações</a></li>
+            <li><a href="contato.html"     class="hover:text-primary transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Clínica Prof. Dr. Nelson Rosário</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Tenente+João+Gomes+da+Silva,+226,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Ten. João Gomes da Silva, 226 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554133394486" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3339-4486
+            </a>
+            <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">chat</span>WhatsApp: (41) 99995-7010
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Hospital N. S. das Graças</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Profa.+Rosa+Saporski,+229,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Profa. Rosa Saporski, 229 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554132406521" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3240-6521
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-center border-t border-outline-variant/10">
+        <p class="text-xs text-on-surface-variant">
+          © 2025–2026 Dra. Cristine Rosário — Todos os direitos reservados.
+          CRM-PR 29.253 · Pediatria RQE Nº 21.533 · Alergia e Imunologia RQE Nº 21.532
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
