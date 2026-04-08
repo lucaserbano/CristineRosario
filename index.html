@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dra. Cristine Rosário — Médica Alergista e Imunologista, Doutora pela UFPR. Atendimento humanizado para adultos e crianças em Curitiba-PR." />
+
+  <title>Dra. Cristine Rosário | Alergia e Imunologia</title>
+
+  <!-- Fonts: Raleway (body) · Newsreader (headline fallback) · Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            /* ── Brand palette ── */
+            "primary":                  "#001E2F",  /* dark navy */
+            "secondary":                "#3B6E8A",  /* steel blue */
+            /* ── Accent ── */
+            "tertiary-fixed-dim":       "#FFBCBD",  /* rose — use sparingly */
+            "on-tertiary-fixed":        "#340F12",
+            /* ── Surfaces (ice-blue family) ── */
+            "background":               "#F3FDFF",
+            "surface":                  "#F3FDFF",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low":    "#EBF9FF",
+            "surface-container":        "#DCEFF8",
+            "surface-container-high":   "#C5E4F2",
+            "surface-container-highest":"#B0D6EC",
+            /* ── Text ── */
+            "on-surface":               "#001E2F",
+            "on-surface-variant":       "#3A5A70",
+            /* ── Secondary variants ── */
+            "secondary-container":      "#C5E4F2",
+            "secondary-fixed":          "#DCEFF8",
+            "secondary-fixed-dim":      "#9CCDE6",
+            "on-secondary-fixed":       "#001E2F",
+            /* ── Borders ── */
+            "outline":                  "#6A9AB5",
+            "outline-variant":          "#AECFE3",
+          },
+          fontFamily: {
+            /* Miller Banner is commercial — see css/styles.css for @font-face setup */
+            "headline": ["Miller Banner", "Newsreader", "Georgia", "serif"],
+            "body":     ["Raleway", "sans-serif"],
+            "label":    ["Raleway", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg":      "0.5rem",
+            "xl":      "0.75rem",
+            "full":    "9999px",
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/animations.js" defer></script>
+</head>
+
+<body class="bg-background font-body text-on-surface">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAV
+  ════════════════════════════════════════════════════════════════ -->
+  <nav class="fixed top-0 w-full z-50 bg-[#F3FDFF] shadow-[0_2px_20px_rgba(0,30,47,0.07)]">
+    <div class="flex justify-between items-center w-full px-8 py-2 max-w-7xl mx-auto">
+
+      <a href="index.html" class="-ml-3">
+        <img src="assets/logo/Logo-navbar-rodape.png"
+             alt="Cristine Rosário — Alergia e Imunologia"
+             class="h-28 w-auto" />
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"       class="text-primary border-b border-primary pb-1 text-sm tracking-wide font-medium">Início</a>
+        <a href="sobre.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Sobre</a>
+        <a href="publicacoes.html" class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Publicações</a>
+        <a href="contato.html"     class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Contato</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium btn-hover">
+          Agendar consulta
+        </a>
+        <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed top-[88px] left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
+    <div class="flex flex-col items-center gap-6 py-8">
+      <a href="index.html" class="text-primary text-lg font-medium">Início</a>
+      <a href="sobre.html" class="text-secondary text-lg">Sobre</a>
+      <a href="publicacoes.html" class="text-secondary text-lg">Publicações</a>
+      <a href="contato.html" class="text-secondary text-lg">Contato</a>
+      <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+         target="_blank" rel="noopener"
+         class="bg-primary text-white px-8 py-3 rounded-full font-medium btn-hover">
+        Agendar consulta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-24 overflow-hidden pattern-overlay-3 pattern-clip-hero">
+      <div class="absolute inset-0 bg-surface-container-low asymmetric-shape -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: headline + CTAs -->
+        <div class="space-y-8">
+          <div class="hero-entrance hero-entrance-1 inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full border border-outline-variant/30">
+            <span class="material-symbols-outlined text-secondary text-sm">verified_user</span>
+            <span class="text-xs uppercase tracking-widest font-semibold text-on-surface-variant">Cuidado Especializado · Curitiba-PR</span>
+          </div>
+
+          <h1 class="hero-entrance hero-entrance-2 text-6xl md:text-7xl lg:text-8xl font-headline leading-[1.05] text-primary">
+            Alergia e<br />
+            Imunologia <span class="italic font-extralight">Pediátrica</span>
+          </h1>
+
+          <p class="hero-entrance hero-entrance-3 text-lg text-on-surface-variant max-w-lg leading-relaxed">
+            Doutora pela UFPR e professora universitária. Atendimento personalizado e humanizado para crianças e adultos com alergias respiratórias, alimentares, dermatológicas e doenças da imunidade.
+          </p>
+
+          <div class="hero-entrance hero-entrance-4 flex flex-wrap gap-4">
+            <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+               target="_blank" rel="noopener"
+               class="bg-primary text-white px-8 py-4 rounded-full font-medium flex items-center gap-2 btn-hover shadow-lg">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+              WhatsApp
+            </a>
+            <a href="contato.html"
+               class="px-8 py-4 rounded-full font-medium text-primary border border-primary/20 hover:bg-surface-container transition-colors">
+              Ver locais de atendimento
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: portrait -->
+        <div class="hero-entrance hero-entrance-5 relative group">
+          <div class="absolute -inset-4 bg-tertiary-fixed-dim/20 rounded-[3rem] rotate-3 transition-transform group-hover:rotate-1"></div>
+          <div class="relative z-10 img-reveal rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="assets/images/foto-hero.jpg"
+                 alt="Dra. Cristine Rosário — Alergista e Imunologista"
+                 class="w-full aspect-[4/5] object-cover bg-surface-container" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         DIFERENCIAIS (BENTO GRID)
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="diferenciais" class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+          <div class="reveal md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] border border-outline-variant/30 card-hover">
+            <span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim mb-6 block"
+                  style="font-variation-settings:'FILL' 1">favorite</span>
+            <h3 class="text-2xl font-headline mb-4 text-primary">Atendimento Humanizado</h3>
+            <p class="text-on-surface-variant leading-relaxed">Priorizamos o vínculo entre médico, paciente e família, transformando a consulta em um momento de acolhimento real.</p>
+          </div>
+
+          <div class="reveal bg-secondary-container p-10 rounded-[2rem] flex flex-col justify-between group overflow-hidden relative card-hover" data-delay="100">
+            <div class="relative z-10">
+              <span class="material-symbols-outlined text-4xl text-on-secondary-fixed mb-6 block">magnification_small</span>
+              <h3 class="text-xl font-headline text-on-secondary-fixed">Investigação Cuidadosa</h3>
+            </div>
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform">
+              <span class="material-symbols-outlined text-8xl">search</span>
+            </div>
+          </div>
+
+          <div class="reveal bg-surface-container-high p-10 rounded-[2rem] flex flex-col justify-between card-hover" data-delay="200">
+            <span class="material-symbols-outlined text-4xl text-secondary mb-6 block">family_restroom</span>
+            <h3 class="text-xl font-headline text-primary">Acompanhamento Individualizado</h3>
+          </div>
+
+          <div class="reveal md:col-span-4 bg-primary p-12 rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-8 card-hover" data-delay="300">
+            <div class="max-w-xl">
+              <h2 class="text-3xl font-headline italic mb-2 text-white">Expertise em Pesquisa Clínica</h2>
+              <p class="text-secondary-fixed-dim">Doutora pela UFPR e Professora Adjunta do Departamento de Pediatria — diagnósticos embasados em ciência de ponta.</p>
+            </div>
+            <span class="material-symbols-outlined text-7xl text-white/20">shield_with_heart</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         QUANDO BUSCAR O ESPECIALISTA
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="quando-buscar" class="py-24 bg-surface-container-lowest pattern-overlay-2 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col lg:flex-row gap-16">
+
+          <div class="lg:w-1/3 reveal from-left">
+            <h2 class="text-5xl lg:text-6xl font-headline text-primary leading-tight sticky top-32">
+              Quando buscar o <br /><span class="italic font-extralight text-secondary">especialista?</span>
+            </h2>
+          </div>
+
+          <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+
+            <div class="reveal space-y-4">
+              <div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center text-on-tertiary-fixed font-semibold">01</div>
+              <h4 class="text-xl font-headline text-primary">Asma e Rinite</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Controle efetivo de sintomas respiratórios recorrentes que afetam a qualidade de vida e o sono.</p>
+            </div>
+
+            <div class="reveal space-y-4" data-delay="150">
+              <div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center text-on-tertiary-fixed font-semibold">02</div>
+              <h4 class="text-xl font-headline text-primary">Alergia Alimentar</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Diagnóstico seguro e orientação para introdução e restrição alimentar em crianças e adultos.</p>
+            </div>
+
+            <div class="reveal space-y-4" data-delay="300">
+              <div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center text-on-tertiary-fixed font-semibold">03</div>
+              <h4 class="text-xl font-headline text-primary">Dermatite Atópica</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Tratamento focado na integridade da pele e redução de crises de coceira e inflamação.</p>
+            </div>
+
+            <div class="reveal space-y-4" data-delay="450">
+              <div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center text-on-tertiary-fixed font-semibold">04</div>
+              <h4 class="text-xl font-headline text-primary">Infecções de Repetição</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Avaliação do sistema imunológico para quem adoece com frequência acima do esperado.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SOBRE A ESPECIALISTA
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="sobre" class="py-24 overflow-hidden bg-background watermark-logo-right">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+        <div class="reveal from-left relative">
+          <div class="img-reveal w-full h-[600px] rounded-[3rem] overflow-hidden">
+            <img src="assets/images/foto-contato.jpg"
+                 alt="Dra. Cristine Rosário no consultório"
+                 class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-fixed rounded-full -z-10 opacity-40 blur-3xl"></div>
+        </div>
+
+        <div class="reveal from-right space-y-8">
+          <p class="text-secondary font-semibold tracking-widest text-sm">SOBRE A ESPECIALISTA</p>
+          <h2 class="text-5xl font-headline text-primary">Dra. Cristine Rosário</h2>
+          <p class="text-on-surface-variant italic text-xl font-headline">Médica Alergista e Imunologista · Doutora pela UFPR</p>
+          <p class="text-on-surface-variant leading-relaxed text-lg">
+            Médica Alergista e Imunologista, doutora pela UFPR e Professora da Universidade Federal do Paraná. Trabalha com pesquisa clínica e acadêmica, e oferece atendimento personalizado e humanizado para adultos e crianças com alergias respiratórias, dermatológicas, alimentares e de medicamentos, além de doenças da imunidade.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
+              <span class="text-on-surface">Residência em Alergia e Imunologia Pediátrica pela UFPR</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
+              <span class="text-on-surface">Professora Adjunta do Departamento de Pediatria da UFPR</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
+              <span class="text-on-surface">Membro do Comitê Científico de Pediatria da ASBAI</span>
+            </li>
+          </ul>
+          <a href="sobre.html"
+             class="inline-flex items-center gap-4 text-primary font-bold border-b-2 border-tertiary-fixed-dim pb-1 hover:gap-6 transition-all">
+            Conheça minha trajetória completa
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         METODOLOGIA DE CUIDADO
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="metodologia" class="py-24 bg-primary pattern-overlay-1 on-dark overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-headline text-white">Nossa Metodologia de Cuidado</h2>
+          <p class="text-secondary-fixed-dim mt-4">Um caminho traçado com clareza e empatia.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+
+          <div class="reveal relative px-8 py-10">
+            <div class="hidden md:block absolute top-[3.25rem] left-[calc(50%+1rem)] right-0 h-px bg-white/15"></div>
+            <span class="text-7xl font-headline italic text-tertiary-fixed-dim/35 block mb-4 leading-none">01</span>
+            <h5 class="font-headline text-lg text-white mb-3">Escuta Atenta</h5>
+            <p class="text-sm text-white/60 leading-relaxed">Ouvimos as queixas e a história completa do paciente e da família, sem pressa.</p>
+          </div>
+
+          <div class="reveal relative px-8 py-10" data-delay="200">
+            <div class="hidden md:block absolute top-[3.25rem] left-0 right-0 h-px bg-white/15"></div>
+            <span class="text-7xl font-headline italic text-tertiary-fixed-dim/35 block mb-4 leading-none">02</span>
+            <h5 class="font-headline text-lg text-white mb-3">Investigação</h5>
+            <p class="text-sm text-white/60 leading-relaxed">Exames e testes realizados com rigor científico e máximo conforto.</p>
+          </div>
+
+          <div class="reveal relative px-8 py-10" data-delay="400">
+            <div class="hidden md:block absolute top-[3.25rem] left-0 right-0 h-px bg-white/15"></div>
+            <span class="text-7xl font-headline italic text-tertiary-fixed-dim/35 block mb-4 leading-none">03</span>
+            <h5 class="font-headline text-lg text-white mb-3">Orientação</h5>
+            <p class="text-sm text-white/60 leading-relaxed">Explicações claras para que o paciente e os pais se sintam seguros.</p>
+          </div>
+
+          <div class="reveal relative px-8 py-10" data-delay="600">
+            <div class="hidden md:block absolute top-[3.25rem] left-0 right-[calc(50%+1rem)] h-px bg-white/15"></div>
+            <span class="text-7xl font-headline italic text-tertiary-fixed-dim/35 block mb-4 leading-none">04</span>
+            <h5 class="font-headline text-lg text-white mb-3">Plano de Cuidado</h5>
+            <p class="text-sm text-white/60 leading-relaxed">Estratégias personalizadas e adaptadas ao dia a dia de cada pessoa.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PUBLICAÇÕES (PREVIEW)
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="publicacoes" class="py-24 bg-surface watermark-logo overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+
+        <div class="flex justify-between items-end mb-16">
+          <div>
+            <h2 class="text-4xl font-headline text-primary">Publicações e Orientações</h2>
+            <p class="text-on-surface-variant mt-2">Ciência traduzida para o cotidiano das famílias.</p>
+          </div>
+          <a href="publicacoes.html" class="hidden md:block text-secondary font-semibold hover:underline">Ver todas as matérias</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <article class="reveal group cursor-pointer card-hover">
+            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+              <img src="assets/images/foto-procedimento.jpg" alt="Teste de alergia cutâneo" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Pele &amp; Alergia</span>
+            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Mitos e verdades sobre a Dermatite Atópica</h3>
+            <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Entenda por que o banho excessivo pode ser um vilão e como escolher os hidratantes certos para pele atópica...</p>
+            <a href="publicacoes.html" class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
+              Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
+            </a>
+          </article>
+
+          <article class="reveal group cursor-pointer card-hover" data-delay="150">
+            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+              <img src="assets/images/foto-publicacoes.jpg" alt="Dra. Cristine Rosário pesquisando" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Imunologia</span>
+            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Como fortalecer a imunidade escolar</h3>
+            <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Dicas práticas para preparar o sistema imunológico para a volta às aulas e o convívio em grupo...</p>
+            <a href="publicacoes.html" class="flex items-center gap-2 text-sm font-bold text-primary link-animated">
+              Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
+            </a>
+          </article>
+
+          <article class="reveal group cursor-pointer card-hover" data-delay="300">
+            <div class="img-reveal overflow-hidden rounded-3xl mb-6 h-56">
+              <img src="assets/images/foto-lupa.jpg" alt="Investigação clínica especializada" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Alimentação</span>
+            <h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Introdução alimentar em alérgicos</h3>
+            <p class="text-on-surface-variant text-sm mb-6 line-clamp-2">O passo a passo seguro para apresentar novos alimentos a bebês com histórico de alergias familiares...</p>
+            <a href="publicacoes.html" class="flex items-center gap-2 text-sm font-bold text-primary">
+              Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CONTATO & AGENDAMENTO
+    ════════════════════════════════════════════════════════════════ -->
+    <section id="contato" class="py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="reveal scale-in bg-primary rounded-[3rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+
+          <div class="p-12 lg:p-20 space-y-10">
+            <h2 class="text-4xl md:text-5xl font-headline text-white leading-tight">
+              Vamos cuidar da saúde do seu <span class="italic text-tertiary-fixed-dim">pequeno?</span>
+            </h2>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-sm">call</span>
+                </div>
+                <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+                   target="_blank" rel="noopener" class="hover:text-white transition-colors">
+                  WhatsApp: (41) 99995-7010
+                </a>
+              </div>
+              <div class="flex items-center gap-4 text-white/80">
+                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-sm">location_on</span>
+                </div>
+                <a href="contato.html" class="hover:text-white transition-colors">
+                  Dois locais em Mercês · Curitiba-PR
+                </a>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+               target="_blank" rel="noopener"
+               class="block w-full py-5 bg-tertiary-fixed-dim text-on-tertiary-fixed font-bold rounded-full hover:scale-105 transition-transform text-center">
+              Agendar pelo WhatsApp agora
+            </a>
+            <a href="contato.html"
+               class="block w-full py-4 border border-white/20 text-white/80 font-medium rounded-full hover:bg-white/10 transition-colors text-center text-sm">
+              Ver todos os locais e contatos
+            </a>
+          </div>
+
+          <div class="relative h-[400px] lg:h-auto">
+            <iframe
+              src="https://maps.google.com/maps?q=Rua+Tenente+Jo%C3%A3o+Gomes+da+Silva,+226,+Merc%C3%AAs,+Curitiba,+PR&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full min-h-[400px] border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização — Clínica Prof. Dr. Nelson Rosário, Mercês, Curitiba-PR">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════════ -->
+  <footer class="bg-[#F3FDFF] pattern-overlay-1 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 pt-16 pb-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand -->
+        <div class="space-y-5">
+          <a href="index.html" class="-ml-3 inline-block">
+            <img src="assets/logo/Logo-navbar-rodape.png" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
+          </a>
+          <div class="text-xs text-on-surface-variant space-y-1 leading-relaxed">
+            <p>CRM-PR 29.253</p>
+            <p>Pediatria · RQE Nº 21.533</p>
+            <p>Alergia e Imunologia · RQE Nº 21.532</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-on-surface-variant pt-1">
+            <span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+            <span>Seg–Sex · 09h às 17h</span>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Navegação</h4>
+          <ul class="space-y-3 text-sm text-secondary">
+            <li><a href="index.html"       class="hover:text-primary hover:underline decoration-tertiary-fixed-dim underline-offset-4 transition-colors">Início</a></li>
+            <li><a href="sobre.html"       class="hover:text-primary hover:underline decoration-tertiary-fixed-dim underline-offset-4 transition-colors">Sobre</a></li>
+            <li><a href="publicacoes.html" class="hover:text-primary hover:underline decoration-tertiary-fixed-dim underline-offset-4 transition-colors">Publicações</a></li>
+            <li><a href="contato.html"     class="hover:text-primary hover:underline decoration-tertiary-fixed-dim underline-offset-4 transition-colors">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Clinic 1 -->
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Clínica Prof. Dr. Nelson Rosário</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <p class="leading-relaxed">
+              <a href="https://maps.google.com/?q=Rua+Tenente+João+Gomes+da+Silva,+226,+Mercês,+Curitiba,+PR"
+                 target="_blank" rel="noopener"
+                 class="hover:text-primary transition-colors flex items-start gap-2">
+                <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+                Rua Ten. João Gomes da Silva, 226 — Mercês, Curitiba-PR
+              </a>
+            </p>
+            <p>
+              <a href="tel:+554133394486" class="flex items-center gap-2 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-base">call</span>
+                (41) 3339-4486
+              </a>
+            </p>
+            <p>
+              <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+                 target="_blank" rel="noopener"
+                 class="flex items-center gap-2 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-base">chat</span>
+                WhatsApp: (41) 99995-7010
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Clinic 2 -->
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Hospital N. S. das Graças</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <p class="leading-relaxed">
+              <a href="https://maps.google.com/?q=Rua+Profa.+Rosa+Saporski,+229,+Mercês,+Curitiba,+PR"
+                 target="_blank" rel="noopener"
+                 class="hover:text-primary transition-colors flex items-start gap-2">
+                <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+                Rua Profa. Rosa Saporski, 229 — Mercês, Curitiba-PR
+              </a>
+            </p>
+            <p>
+              <a href="tel:+554132406521" class="flex items-center gap-2 hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-base">call</span>
+                (41) 3240-6521
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center border-t border-outline-variant/10">
+        <p class="text-xs text-on-surface-variant">
+          © 2025–2026 Dra. Cristine Rosário — Todos os direitos reservados.
+          CRM-PR 29.253 · Pediatria RQE Nº 21.533 · Alergia e Imunologia RQE Nº 21.532
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

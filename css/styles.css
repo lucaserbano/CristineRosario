@@ -1,0 +1,382 @@
+/*
+ * styles.css — Cristine Rosário · Alergia e Imunologia
+ * Design system reference: assets/stitch/DESIGN.md
+ *
+ * TYPOGRAPHY:
+ *   Headlines → Miller Banner (commercial, see below) / fallback: Newsreader
+ *   Body      → Raleway (Google Fonts, loaded in each HTML <head>)
+ *
+ * MILLER BANNER:
+ *   Commercial font — requires a license from Font Bureau.
+ *   Purchase: https://www.fontbureau.com/nhg/miller/
+ *   Place the licensed .woff2 files in assets/fonts/ and uncomment the
+ *   @font-face blocks below. Until then, Newsreader (already imported) is
+ *   the fallback and looks excellent for this design.
+ *
+ * @font-face {
+ *   font-family: 'Miller Banner';
+ *   src: url('../assets/fonts/MillerBanner-Roman.woff2') format('woff2');
+ *   font-weight: 400;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ * @font-face {
+ *   font-family: 'Miller Banner';
+ *   src: url('../assets/fonts/MillerBanner-Italic.woff2') format('woff2');
+ *   font-weight: 400;
+ *   font-style: italic;
+ *   font-display: swap;
+ * }
+ * @font-face {
+ *   font-family: 'Miller Banner';
+ *   src: url('../assets/fonts/MillerBanner-SemiBold.woff2') format('woff2');
+ *   font-weight: 600;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+/* ─── Material Symbols ─────────────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* ─── Glassmorphism ─────────────────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── Hero Gradient ─────────────────────────────────────────────────────────── */
+.hero-gradient {
+  background: linear-gradient(135deg, #001e2f 0%, #27638d 100%);
+}
+
+/* ─── Asymmetric Shape ──────────────────────────────────────────────────────── */
+.asymmetric-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ANIMATION SYSTEM
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Keyframes ────────────────────────────────────────────────────────────── */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 188, 189, 0.4); }
+  50%      { box-shadow: 0 0 20px 8px rgba(255, 188, 189, 0.15); }
+}
+
+/* ─── Hero Entrance (auto-plays on page load) ─────────────────────────────── */
+.hero-entrance {
+  opacity: 0;
+  animation: heroFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-entrance-1 { animation-delay: 0.1s; }
+.hero-entrance-2 { animation-delay: 0.25s; }
+.hero-entrance-3 { animation-delay: 0.4s; }
+.hero-entrance-4 { animation-delay: 0.55s; }
+.hero-entrance-5 { animation-delay: 0.7s; }
+
+/* ─── Scroll Reveal System ─────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+.reveal.from-left {
+  transform: translateX(-40px);
+}
+.reveal.from-right {
+  transform: translateX(40px);
+}
+.reveal.scale-in {
+  transform: scale(0.92);
+}
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ─── Card Hover Micro-Interactions ────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 30, 47, 0.06);
+}
+
+/* ─── Button Hover Refinements ─────────────────────────────────────────────── */
+.btn-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease;
+}
+.btn-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 30, 47, 0.12);
+}
+
+/* ─── Link Animated Underline ──────────────────────────────────────────────── */
+.link-animated {
+  position: relative;
+  display: inline-block;
+}
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFBCBD;
+  transition: width 0.3s ease;
+}
+.link-animated:hover::after {
+  width: 100%;
+}
+
+/* ─── Image Reveal (zoom-in on load) ──────────────────────────────────────── */
+.img-reveal {
+  overflow: hidden;
+}
+.img-reveal img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-reveal:hover img {
+  transform: scale(1.03);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BRAND IDENTITY OVERLAYS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Logo Watermark — base (centrado, light bg) ───────────────────────────── */
+.watermark-logo {
+  position: relative;
+}
+.watermark-logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/logo/logo-principal.png') center / 420px no-repeat;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Logo Watermark — posicionado à direita ──────────────────────────────── */
+.watermark-logo-right {
+  position: relative;
+}
+.watermark-logo-right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  transform: translateY(-50%);
+  background: url('../assets/logo/logo-principal.png') center / contain no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Logo Watermark — posicionado à esquerda ─────────────────────────────── */
+.watermark-logo-left {
+  position: relative;
+}
+.watermark-logo-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  transform: translateY(-50%);
+  background: url('../assets/logo/logo-principal.png') center / contain no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Logo Watermark — gigante (80–90% da altura da seção) ────────────────── */
+.watermark-logo-giant {
+  position: relative;
+}
+.watermark-logo-giant::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 90%;
+  background: url('../assets/logo/logo-principal.png') center / contain no-repeat;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Pattern Overlays ─────────────────────────────────────────────────────── */
+/*
+ * Todos os patterns usam mask-image com gradiente radial:
+ * aparecem nos cantos e somem suavemente em direção ao centro.
+ */
+
+/* Pattern 1 — snowflake/starburst (blue + rose) — textura ornamental */
+/* tile: 4167×4167px → background-size 1400px ≈ 60px por elemento */
+.pattern-overlay-1 {
+  position: relative;
+}
+.pattern-overlay-1::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/Identidade%20visual/Pattern%201.png') repeat;
+  background-size: 1400px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+  mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+}
+
+/* Pattern 2 — lupas — investigação/diagnóstico */
+/* tile: 7209×7209px → background-size 1600px ≈ 65px por lupa */
+.pattern-overlay-2 {
+  position: relative;
+}
+.pattern-overlay-2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/Identidade%20visual/Pattern%202.png') repeat;
+  background-size: 1600px;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+  mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+}
+
+/* Pattern 3 — anticorpos Y (navy, azul, rosa) — imunologia */
+/* tile: 7209×7209px → background-size 1800px ≈ 75px por anticorpo */
+.pattern-overlay-3 {
+  position: relative;
+}
+.pattern-overlay-3::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/Identidade%20visual/Pattern%203.png') repeat;
+  background-size: 1800px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+  mask-image: radial-gradient(ellipse at center, transparent 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 80%);
+}
+
+/* Pattern em fundo escuro — opacidade maior para compensar o contraste invertido */
+.pattern-overlay-1.on-dark::after {
+  opacity: 0.22;
+}
+
+/* Hero — fade gradiente no fundo para anticorpos dissolverem antes do corte diagonal */
+.pattern-clip-hero::after {
+  clip-path: none;
+  -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 50%,
+    rgba(0,0,0,0.4) 72%,
+    rgba(0,0,0,0) 84%
+  );
+  mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 50%,
+    rgba(0,0,0,0.4) 72%,
+    rgba(0,0,0,0) 84%
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   NAV & MOBILE MENU
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Nav Scroll State ─────────────────────────────────────────────────────── */
+.nav-scrolled {
+  background: #F3FDFF !important;
+  box-shadow: 0 4px 30px rgba(0, 30, 47, 0.1) !important;
+}
+
+/* ─── Hamburger ────────────────────────────────────────────────────────────── */
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #001E2F;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease;
+}
+.hamburger-open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ─── Mobile Menu Drawer ──────────────────────────────────────────────────── */
+.mobile-menu {
+  transform: translateY(-110%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Ensure children sit above pseudo-element overlays */
+.pattern-overlay-1 > *,
+.pattern-overlay-2 > *,
+.pattern-overlay-3 > *,
+.watermark-logo > *,
+.watermark-logo-right > *,
+.watermark-logo-left > *,
+.watermark-logo-giant > * {
+  position: relative;
+  z-index: 1;
+}

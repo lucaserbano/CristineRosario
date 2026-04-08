@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#68393b",
+              "primary-fixed": "#e2f3e8", /* Adjusted for green theme */
+              "tertiary-container": "#340f12",
+              "surface-container-low": "#f4f9f6", /* New soft green neutral */
+              "primary": "#001e2f",
+              "on-secondary-container": "#274d3b",
+              "surface-container": "#ecf4f0", /* New soft green neutral */
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#444d48",
+              "on-secondary-fixed-variant": "#204e39",
+              "background": "#f8fbf9", /* Very soft clinical green base */
+              "secondary-fixed": "#d3ece0",
+              "secondary-fixed-dim": "#b7dfcc",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#486175",
+              "surface-container-high": "#e4eee8",
+              "on-primary-fixed": "#001e2f",
+              "tertiary-fixed": "#ffbcbd", /* Requested Highlight */
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f0fdf4",
+              "on-secondary-fixed": "#002114",
+              "on-error": "#ffffff",
+              "surface-dim": "#d9e4de",
+              "inverse-surface": "#2d3230",
+              "primary-fixed-dim": "#cbe0d4",
+              "secondary": "#3d6352",
+              "outline-variant": "#c0ccc5",
+              "outline": "#707974",
+              "surface-variant": "#dee5e0",
+              "surface-container-highest": "#d8e3dd",
+              "on-tertiary-container": "#ae7576",
+              "inverse-primary": "#afcae0",
+              "secondary-container": "#bcece0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "tertiary": "#000000",
+              "on-surface": "#001e2f",
+              "surface-bright": "#f8fbf9",
+              "on-primary-container": "#001e2f",
+              "primary-container": "#001e2f",
+              "surface": "#f8fbf9",
+              "on-tertiary-fixed": "#340f12",
+              "error": "#ba1a1a",
+              "on-background": "#001e2f",
+              "on-primary-fixed-variant": "#304a5c",
+              "tertiary-fixed-dim": "#ffbcbd" /* Requested Highlight */
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #001e2f 0%, #27638d 100%);
+      }
+      .asymmetric-shape {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_20_40px_rgba(12,29,43,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-headline italic text-primary">Aura Clinical</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b border-primary pb-1 text-sm tracking-wide" href="#">Início</a>
+<a class="text-secondary hover:text-primary text-sm tracking-wide transition-colors" href="#">Sobre</a>
+<a class="text-secondary hover:text-primary text-sm tracking-wide transition-colors" href="#">Publicações</a>
+<a class="text-secondary hover:text-primary text-sm tracking-wide transition-colors" href="#">Contato</a>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-300 glass-card">
+                Agendar consulta
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-low asymmetric-shape -z-10"></div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary text-sm">verified_user</span>
+<span class="text-xs uppercase tracking-widest font-semibold text-on-surface-variant">Cuidado Especializado</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-headline leading-tight text-primary">
+                    Alergia e Imunologia <br/>
+<span class="italic font-light">Pediátrica</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-lg leading-relaxed">
+                    Acolhimento, escuta e expertise técnica para garantir o desenvolvimento saudável do seu filho através de um cuidado individualizado e humano.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-white px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:scale-105 transition-transform shadow-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        WhatsApp
+                    </a>
+<a class="px-8 py-4 rounded-full font-medium text-primary border border-primary/20 hover:bg-surface-container transition-colors" href="#">
+                        Agendar via Site
+                    </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary-fixed-dim/20 rounded-[3rem] rotate-3 transition-transform group-hover:rotate-1"></div>
+<img alt="Dra. Médica" class="relative z-10 w-full aspect-[4/5] object-cover rounded-[2.5rem] shadow-2xl" data-alt="Professional portrait of a warm smiling female pediatrician in a soft clinical setting with natural light and minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApnPC-gEeTEUxWKsrx4tLpopsmxPp_rcPr-C3GmpzyM3RT69nx27b80_VmocfgPIHAR5HWLIRzTRtnNB-d_ErdwxRJSWGEQFN96qrZAWG8p0gTLN-tuBCwRKjP2VJpxcovxK8RFtSiNXWI6PzAgVSzgu-KVTc1Pc-2o1IojiVbM_rwp26Ca1AbfaEscFhQS-vwP4AylGF7ABZTIwdsMLlUC39tQ31FXi9v5Gcv7pVGFIBKrgqtISHLJdIn1ydgxWEn390TBr9ZPM3m"/>
+<div class="absolute -bottom-6 -left-6 z-20 glass-card p-6 rounded-2xl shadow-xl max-w-[200px]">
+<p class="font-headline italic text-lg text-primary">[NOME DA MÉDICA]</p>
+<p class="text-xs text-secondary mt-1 uppercase tracking-tighter">CRM-BR: 000000</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Trust-building Bento Grid -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-[2rem] border border-outline-variant/15 hover:shadow-xl transition-shadow group">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim mb-6 block" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="text-2xl font-headline mb-4 text-primary">Atendimento Humanizado</h3>
+<p class="text-on-surface-variant leading-relaxed">Priorizamos o vínculo entre médico, criança e família, transformando a consulta em um momento de acolhimento.</p>
+</div>
+<div class="bg-secondary-container p-10 rounded-[2rem] flex flex-col justify-between group overflow-hidden relative">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-on-secondary-fixed mb-6 block">magnification_small</span>
+<h3 class="text-xl font-headline text-on-secondary-fixed">Investigação Cuidadosa</h3>
+</div>
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-8xl">search</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 rounded-[2rem] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block">family_restroom</span>
+<h3 class="text-xl font-headline text-primary">Acompanhamento Individualizado</h3>
+</div>
+<div class="md:col-span-4 bg-primary p-12 rounded-[2rem] text-white flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="max-w-xl">
+<h2 class="text-3xl font-headline italic mb-2 text-white">Expertise em Imunologia</h2>
+<p class="text-secondary-fixed-dim">Especialização técnica de ponta para diagnósticos precisos em casos complexos de alergias e imunodeficiências.</p>
+</div>
+<span class="material-symbols-outlined text-7xl text-white/20">shield_with_heart</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reasons to seek care -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/3">
+<h2 class="text-5xl font-headline text-primary leading-tight sticky top-32">
+                        Quando buscar o <br/><span class="italic text-secondary">especialista?</span>
+</h2>
+</div>
+<div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center text-on-tertiary-fixed">01</div>
+<h4 class="text-xl font-headline text-primary">Asma e Rinite</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Controle efetivo de sintomas respiratórios recorrentes que afetam a qualidade do sono e brincadeiras.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary">02</div>
+<h4 class="text-xl font-headline text-primary">Alergia Alimentar</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Diagnóstico seguro e orientação nutricional para introdução alimentar e restrições necessárias.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary">03</div>
+<h4 class="text-xl font-headline text-primary">Dermatite Atópica</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tratamento focado na integridade da pele e redução de crises de coceira e inflamação.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-secondary">04</div>
+<h4 class="text-xl font-headline text-primary">Infecções de Repetição</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Avaliação aprofundada do sistema imunológico para crianças que adoecem com muita frequência.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Preview -->
+<section class="py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<img alt="Médica em consulta" class="w-full h-[600px] object-cover rounded-[3rem]" data-alt="Doctor interacting kindly with a child in a minimalist modern pediatric office, focus on the gentle interaction and professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsSJUuFrkQjPsrsqgyO1fj5UikDuDYLu7-1qYzYm9vtlHBtNtmjusk0Y95UB7g0Rp2XW3dJNls8lZ6E-b_XPHGMw8-bRz6-9Gi7O8JcD_eIK-ObqrwTvmYpviEY8KGwOUMwbKUeeggbcddLgmzJFu8Psu7bBx2WFUrlgm8hpNxWw7BgWyEkceuJxpIY1EhEnlq0EBOzI4QJI4bsv2WBCi9Zt5-d7dDy-LzLZsarnJOG3TohiAKFhFXRxDlXULyzYdd481pSlC7n2Gm"/>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-fixed rounded-full -z-10 opacity-30 blur-3xl"></div>
+</div>
+<div class="space-y-8">
+<p class="text-secondary font-semibold tracking-widest text-sm">SOBRE A ESPECIALISTA</p>
+<h2 class="text-5xl font-headline text-primary">[NOME DA MÉDICA]</h2>
+<p class="text-on-surface-variant italic text-xl font-headline">[SUBTÍTULO PROFISSIONAL]</p>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                    Com anos de dedicação à saúde infantil, [NOME DA MÉDICA] une a ciência rigorosa da imunologia ao olhar atento da pediatria humanizada. Sua trajetória é marcada pela busca constante por tratamentos que respeitem a individualidade de cada pequeno paciente.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
+<span class="text-on-surface">Especialista em Alergia e Imunologia pelo [INSTITUIÇÃO]</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
+<span class="text-on-surface">Membro da Sociedade Brasileira de Pediatria</span>
+</li>
+</ul>
+<a class="inline-flex items-center gap-4 text-primary font-bold border-b-2 border-tertiary-fixed-dim pb-1 hover:gap-6 transition-all" href="#">
+                    Conheça mais sobre minha trajetória
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Care Approach -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline text-primary">Nossa Metodologia de Cuidado</h2>
+<p class="text-on-surface-variant mt-4">Um caminho traçado com clareza e empatia.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="glass-card p-8 rounded-3xl text-center space-y-4">
+<span class="material-symbols-outlined text-3xl text-secondary">hearing</span>
+<h5 class="font-headline text-lg">Escuta Atenta</h5>
+<p class="text-sm text-on-surface-variant">Ouvimos as queixas e a história da família sem pressa.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl text-center space-y-4 mt-8 md:mt-12">
+<span class="material-symbols-outlined text-3xl text-secondary">clinical_notes</span>
+<h5 class="font-headline text-lg">Investigação</h5>
+<p class="text-sm text-on-surface-variant">Exames e testes realizados com o máximo de conforto.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl text-center space-y-4">
+<span class="material-symbols-outlined text-3xl text-secondary">forum</span>
+<h5 class="font-headline text-lg">Orientação</h5>
+<p class="text-sm text-on-surface-variant">Explicações claras para que os pais se sintam seguros.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl text-center space-y-4 mt-8 md:mt-12">
+<span class="material-symbols-outlined text-3xl text-secondary">calendar_today</span>
+<h5 class="font-headline text-lg">Plano de Cuidado</h5>
+<p class="text-sm text-on-surface-variant">Estratégias personalizadas para o dia a dia da criança.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Publications Preview -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-headline text-primary">Publicações e Orientações</h2>
+<p class="text-on-surface-variant mt-2">Ciência traduzida para o cotidiano das famílias.</p>
+</div>
+<a class="hidden md:block text-secondary font-semibold hover:underline" href="#">Ver todas as matérias</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Article 1 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-3xl mb-6">
+<img alt="Cuidados com a pele" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Macro photo of soft white cotton texture, representing sensitive skin care and purity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQU3cJm-VLbAU9po-Y7m7ufbULDjf7tn9gz5ctTs5UIgm-95EqfcRoCal4kzfcUVDf1Vr4qVkJf3o2JW6-o6jPw7J0v7yiZypCK6Fmix1hBROQuCrc9rT95pkXEWtAIYOFNQw26vhLFjYYJHRIfR-B7o6QQA7-s27RcqcoTpaFY8KjGcvam6T4RTEXVylHUywRERCKUzR8LIEIhLtuKMNJ_7QKdDIytw_WC_JNmy-6ZIsE5KqYov_aO7Mhs_wy3v_kxtj29kc-YPFG"/>
+</div>
+<span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Pele &amp; Alergia</span>
+<h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Mitos e verdades sobre a Dermatite Atópica</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Entenda por que o banho excessivo pode ser um vilão e como escolher os hidratantes certos...</p>
+<span class="flex items-center gap-2 text-sm font-bold">Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span></span>
+</article>
+<!-- Article 2 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-3xl mb-6">
+<img alt="Imunidade infantil" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sunlight filtering through fresh green leaves, symbolizing health, growth and a strong immune system" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgiTls92bkSbUxAHptosI7yN93VOpNTcAGg-WgaF_LmWxYjn8Yc8Xkk3KdOMoRELxgbe7IRVFkaGvt7i2_b_pjOfBvfnhmhkOrLEznotOdza10O9pUkENeKXSnxfnCDyx43OF6C-JkCa8KmrcL_SaaVybHpJe4B8b2cPdIaKnpuNUveb3KisxOR9CAvCBEApI8HVh6CPtCAXArSXkgo4MMDQUx9rMzJDrPfXjKbtcmZ_yjVcgHCsybBgeeBnF7Y60_6idSFnIvcsyk"/>
+</div>
+<span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Imunologia</span>
+<h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Como fortalecer a imunidade escolar</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Dicas práticas para preparar o sistema imunológico para a volta às aulas e o convívio em grupo...</p>
+<span class="flex items-center gap-2 text-sm font-bold">Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span></span>
+</article>
+<!-- Article 3 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-3xl mb-6">
+<img alt="Alimentação saudável" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Still life of fresh colorful fruits in a minimalist wooden bowl on a light blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvTOTSf2xmC0tWgDOley4LsZ9ee-u5LQepHieXQkuN2sADeiN0bX-5-jORNO8zaeB26R603EIqdHW6RhPkx5d7VA3J3ADriWwCRvTka5EsPavQz_ktLtq8aCSarg3G2lv0HUIrgm7mtgKmU8Ma0prOtReQJmnW1hBgvlkzAVeWBmaeQPYImL4ULVp7IjltHrR1FkB-hP9yTsUnAHToDsJ5-s55PzG2RPGOJHrSdx-2yAsWr8VoRnbLGaNdbZAB8aE2OpEjh4qqVX_"/>
+</div>
+<span class="text-xs font-bold text-tertiary-fixed-dim uppercase tracking-widest mb-3 block">Alimentação</span>
+<h3 class="text-2xl font-headline text-primary group-hover:text-secondary transition-colors mb-4">Introdução alimentar em alérgicos</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">O passo a passo seguro para apresentar novos alimentos a bebês com histórico de alergias familiares...</p>
+<span class="flex items-center gap-2 text-sm font-bold">Ler mais <span class="material-symbols-outlined text-sm">trending_flat</span></span>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact and Scheduling -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-[3rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 lg:p-20 space-y-10">
+<h2 class="text-4xl md:text-5xl font-headline text-white leading-tight">Vamos cuidar da saúde do seu <span class="italic text-tertiary-fixed-dim">pequeno?</span></h2>
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">call</span>
+</div>
+<span>[WHATSAPP]</span>
+</div>
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<span>[E-MAIL]</span>
+</div>
+<div class="flex items-center gap-4 text-white/80">
+<div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">location_on</span>
+</div>
+<span>[ENDEREÇO]</span>
+</div>
+</div>
+<button class="w-full py-5 bg-tertiary-fixed-dim text-on-tertiary-fixed font-bold rounded-full hover:scale-105 transition-transform">
+                        Agendar Horário agora
+                    </button>
+</div>
+<div class="relative h-[400px] lg:h-auto">
+<div class="absolute inset-0 bg-secondary/20 z-10"></div>
+<img alt="Mapa Localização" class="w-full h-full object-cover" data-alt="Subtle abstract map representation of a modern urban area with clean lines and soft blue tones" data-location="São Paulo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuhz31rlpLqr9lKzbC5kiUCiOI8W3rloc7K-sPiK3vjb5CdhyIg3JjWkK6yP0OrXvuKVuuWC_ZKrCQ0TVmdgdleuXwXTjgzRf-Bcde_1QfHr_cna1NTdXo1228F_iVAiLruBjuhK7mtcMmZeM3I_KpdVSSky-ez1SAYXBkmVzSK512HsBaX9TNMaKbUCvAviIjBPdI_QPE5seYPNcYpPtzedmtl4cQRatVAYE0yd8tXem-84NJOpkVGyRzsX3AEbWTfVYTUPq0LrHL"/>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+<div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center animate-bounce shadow-2xl">
+<span class="material-symbols-outlined text-on-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full rounded-t-[2rem]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-headline text-primary">Aura Clinical</div>
+<p class="text-sm text-secondary leading-relaxed">
+                    Dedicação exclusiva à pediatria, alergia e imunologia. Um espaço de cuidado para quem você mais ama.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-outline flex items-center justify-center text-on-surface hover:bg-secondary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6 text-primary">Navegação</h4>
+<ul class="space-y-4 text-sm text-secondary">
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">Início</a></li>
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">Sobre</a></li>
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">Publicações</a></li>
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">Contato</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6 text-primary">Fale Conosco</h4>
+<ul class="space-y-4 text-sm text-secondary">
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">WhatsApp</a></li>
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">E-mail</a></li>
+<li><a class="hover:underline decoration-tertiary-fixed-dim underline-offset-4" href="#">Endereço</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6 text-primary">Horários</h4>
+<p class="text-sm text-secondary leading-relaxed">
+                    Segunda a Sexta: 08:00 - 18:00<br/>
+                    Sábados: 08:00 - 12:00
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pb-8 text-center border-t border-outline-variant/10 pt-8">
+<p class="text-xs text-on-surface-variant font-body">© 2024 Aura Clinical - Todos os direitos reservados. CRM-BR: 000000</p>
+</div>
+</footer>
+</body></html>

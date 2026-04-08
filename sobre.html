@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conheça a Dra. Cristine Rosário — Médica Alergista e Imunologista, Doutora pela UFPR e Professora do Departamento de Pediatria da UFPR." />
+
+  <title>Sobre | Dra. Cristine Rosário</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary":                  "#001E2F",
+            "secondary":                "#3B6E8A",
+            "tertiary-fixed-dim":       "#FFBCBD",
+            "on-tertiary-fixed":        "#340F12",
+            "background":               "#F3FDFF",
+            "surface":                  "#F3FDFF",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low":    "#EBF9FF",
+            "surface-container":        "#DCEFF8",
+            "surface-container-high":   "#C5E4F2",
+            "surface-container-highest":"#B0D6EC",
+            "on-surface":               "#001E2F",
+            "on-surface-variant":       "#3A5A70",
+            "secondary-container":      "#C5E4F2",
+            "secondary-fixed":          "#DCEFF8",
+            "secondary-fixed-dim":      "#9CCDE6",
+            "on-secondary-fixed":       "#001E2F",
+            "outline":                  "#6A9AB5",
+            "outline-variant":          "#AECFE3",
+          },
+          fontFamily: {
+            "headline": ["Miller Banner", "Newsreader", "Georgia", "serif"],
+            "body":     ["Raleway", "sans-serif"],
+            "label":    ["Raleway", "sans-serif"],
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/animations.js" defer></script>
+</head>
+
+<body class="bg-background font-body text-on-surface">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#F3FDFF] shadow-[0_2px_20px_rgba(0,30,47,0.07)]">
+    <div class="flex justify-between items-center w-full px-8 py-2 max-w-7xl mx-auto">
+      <a href="index.html" class="-ml-3">
+        <img src="assets/logo/Logo-navbar-rodape.png" alt="Cristine Rosário — Alergia e Imunologia" class="h-28 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"       class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Início</a>
+        <a href="sobre.html"       class="text-primary border-b border-primary pb-1 text-sm tracking-wide font-medium">Sobre</a>
+        <a href="publicacoes.html" class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Publicações</a>
+        <a href="contato.html"     class="text-secondary hover:text-primary text-sm tracking-wide transition-colors">Contato</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+           target="_blank" rel="noopener"
+           class="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium btn-hover">
+          Agendar consulta
+        </a>
+        <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu fixed top-[88px] left-0 w-full bg-background/98 backdrop-blur-xl z-40 shadow-lg md:hidden">
+    <div class="flex flex-col items-center gap-6 py-8">
+      <a href="index.html" class="text-secondary text-lg">Início</a>
+      <a href="sobre.html" class="text-primary text-lg font-medium">Sobre</a>
+      <a href="publicacoes.html" class="text-secondary text-lg">Publicações</a>
+      <a href="contato.html" class="text-secondary text-lg">Contato</a>
+      <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+         target="_blank" rel="noopener"
+         class="bg-primary text-white px-8 py-3 rounded-full font-medium btn-hover">
+        Agendar consulta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative pt-40 pb-24 overflow-hidden watermark-logo-left">
+      <div class="absolute inset-0 bg-surface-container-low asymmetric-shape -z-10"></div>
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div class="space-y-6">
+          <p class="hero-entrance hero-entrance-1 text-secondary font-semibold tracking-widest text-sm">SOBRE A ESPECIALISTA</p>
+          <h1 class="hero-entrance hero-entrance-2 text-6xl md:text-7xl lg:text-8xl font-headline text-primary leading-[1.05]">
+            Dra. Cristine<br /><span class="italic font-extralight">Rosário</span>
+          </h1>
+          <p class="hero-entrance hero-entrance-3 text-xl font-headline italic text-on-surface-variant">
+            Médica Alergista e Imunologista · Doutora pela UFPR
+          </p>
+          <p class="hero-entrance hero-entrance-3 text-on-surface-variant leading-relaxed text-lg max-w-lg">
+            Mãe do Eduardo, filha de médico, professora por vocação. A maternidade com um filho alérgico transformou a forma como cuida de cada paciente — porque entende o que é estar do outro lado.
+          </p>
+          <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+             target="_blank" rel="noopener"
+             class="hero-entrance hero-entrance-4 inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-medium btn-hover shadow-lg">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+            Agendar consulta
+          </a>
+        </div>
+
+        <div class="hero-entrance hero-entrance-5 relative group">
+          <div class="absolute -inset-4 bg-tertiary-fixed-dim/20 rounded-[3rem] rotate-3 transition-transform group-hover:rotate-1"></div>
+          <div class="relative z-10 img-reveal rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="assets/fotos/foto-legal.jpg"
+                 alt="Dra. Cristine Rosário"
+                 class="w-full aspect-[4/5] object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BIO PESSOAL -->
+    <section class="py-24 bg-surface-container-lowest overflow-hidden">
+      <div class="max-w-4xl mx-auto px-8">
+        <p class="reveal text-secondary font-semibold tracking-widest text-sm mb-6">UM POUCO SOBRE MIM</p>
+        <h2 class="reveal text-4xl font-headline text-primary mb-12 leading-tight">
+          Medicina é a minha <span class="italic text-secondary">vocação</span>
+        </h2>
+        <div class="reveal space-y-6 text-on-surface-variant leading-relaxed text-lg" data-delay="200">
+          <p>
+            Sou a Cristine, mãe do Eduardo. Gosto muito de estar com a família e viajar. Valorizo muito os momentos de convívio com as pessoas que amo. Adoro ler, brincar com cachorros e escutar música.
+          </p>
+          <p>
+            Sou filha de um médico e uma administradora. Meu pai sempre foi meu grande exemplo e inspiração. Desde criança queria ser médica e minhas bonecas eram minhas pacientes.
+          </p>
+          <p>
+            Ainda durante minha formação profissional, casei e realizei o grande sonho de ser mãe. Acredito que a maternidade me tornou uma pessoa melhor e uma médica melhor, pois meu filho também é alérgico e consigo me colocar no lugar dos pais dos meus pacientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO E CURRÍCULO -->
+    <section class="py-24 bg-background">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+
+          <!-- Formação -->
+          <div>
+            <p class="text-secondary font-semibold tracking-widest text-sm mb-6">FORMAÇÃO E TRAJETÓRIA</p>
+            <h2 class="text-4xl font-headline text-primary mb-10 leading-tight">Currículo</h2>
+
+            <ul class="space-y-6">
+
+              <li class="reveal flex items-start gap-4">
+                <div class="w-2 h-2 bg-tertiary-fixed-dim rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Estágio no Children's Hospital Los Angeles</p>
+                  <p class="text-on-surface-variant text-sm mt-1">Departamento de Pediatria Geral · 2011</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="80">
+                <div class="w-2 h-2 bg-tertiary-fixed-dim rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Residência Médica em Pediatria</p>
+                  <p class="text-on-surface-variant text-sm mt-1">Universidade Federal do Paraná (UFPR)</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="160">
+                <div class="w-2 h-2 bg-tertiary-fixed-dim rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Residência Médica em Alergia e Imunologia Pediátrica</p>
+                  <p class="text-on-surface-variant text-sm mt-1">Universidade Federal do Paraná (UFPR)</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="240">
+                <div class="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Título de Especialista em Alergia e Imunologia</p>
+                  <p class="text-on-surface-variant text-sm mt-1">CRM-PR 29.253 · RQE Nº 21.532</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="320">
+                <div class="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Doutora em Saúde da Criança e do Adolescente</p>
+                  <p class="text-on-surface-variant text-sm mt-1">Universidade Federal do Paraná (UFPR)</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="400">
+                <div class="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Professora Adjunta do Departamento de Pediatria</p>
+                  <p class="text-on-surface-variant text-sm mt-1">Universidade Federal do Paraná (UFPR)</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="480">
+                <div class="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Membro do Comitê Científico de Pediatria da ASBAI</p>
+                </div>
+              </li>
+
+              <li class="reveal flex items-start gap-4" data-delay="560">
+                <div class="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <p class="text-on-surface font-medium">Membro do Comitê Científico de Dermatite Atópica da SLAAI</p>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="mt-10">
+              <a href="http://lattes.cnpq.br/8121446960823149"
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-3 px-6 py-3 border border-primary/30 rounded-full text-primary text-sm font-semibold hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined text-base">open_in_new</span>
+                Currículo Lattes completo
+              </a>
+            </div>
+          </div>
+
+          <!-- Prêmios + CRM cards -->
+          <div class="space-y-8">
+
+            <div>
+              <p class="text-secondary font-semibold tracking-widest text-sm mb-6">RECONHECIMENTOS</p>
+              <h2 class="text-4xl font-headline text-primary mb-10 leading-tight">Prêmios</h2>
+
+              <div class="space-y-4">
+
+                <div class="reveal bg-surface-container-lowest p-6 rounded-[1.5rem] border border-outline-variant/30 flex items-start gap-4 card-hover">
+                  <div class="w-10 h-10 bg-tertiary-fixed-dim/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings:'FILL' 1">emoji_events</span>
+                  </div>
+                  <div>
+                    <p class="text-on-surface font-medium">Especialista do Futuro ASBAI</p>
+                    <p class="text-on-surface-variant text-sm mt-1">2015</p>
+                  </div>
+                </div>
+
+                <div class="reveal bg-surface-container-lowest p-6 rounded-[1.5rem] border border-outline-variant/30 flex items-start gap-4 card-hover" data-delay="150">
+                  <div class="w-10 h-10 bg-tertiary-fixed-dim/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings:'FILL' 1">emoji_events</span>
+                  </div>
+                  <div>
+                    <p class="text-on-surface font-medium">Grant ASBAI/WAO Congress</p>
+                    <p class="text-on-surface-variant text-sm mt-1">2014</p>
+                  </div>
+                </div>
+
+                <div class="reveal bg-surface-container-lowest p-6 rounded-[1.5rem] border border-outline-variant/30 flex items-start gap-4 card-hover" data-delay="300">
+                  <div class="w-10 h-10 bg-tertiary-fixed-dim/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings:'FILL' 1">emoji_events</span>
+                  </div>
+                  <div>
+                    <p class="text-on-surface font-medium">Grant WISC Jerusalém</p>
+                    <p class="text-on-surface-variant text-sm mt-1">2016</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Credentials card -->
+            <div class="reveal scale-in bg-primary p-8 rounded-[2rem] text-white space-y-4" data-delay="400">
+              <p class="text-secondary-fixed-dim text-sm font-semibold tracking-widest">REGISTRO PROFISSIONAL</p>
+              <div class="space-y-3 text-white/90 text-sm">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">verified</span>
+                  <span>CRM-PR 29.253</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">verified</span>
+                  <span>Pediatria · RQE Nº 21.533</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">verified</span>
+                  <span>Alergia e Imunologia · RQE Nº 21.532</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-surface-container-low">
+      <div class="reveal max-w-3xl mx-auto px-8 text-center space-y-6">
+        <h2 class="text-4xl font-headline text-primary">Agende sua <span class="italic text-secondary">consulta</span></h2>
+        <p class="text-on-surface-variant leading-relaxed">Atendimento humanizado e personalizado em Curitiba-PR.</p>
+        <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-medium btn-hover shadow-lg">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">chat</span>
+            WhatsApp
+          </a>
+          <a href="contato.html"
+             class="px-8 py-4 rounded-full font-medium text-primary border border-primary/20 hover:bg-surface-container transition-colors">
+            Ver locais de atendimento
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#F3FDFF] pattern-overlay-1 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 pt-16 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="space-y-5">
+          <a href="index.html" class="-ml-3 inline-block">
+            <img src="assets/logo/Logo-navbar-rodape.png" alt="Cristine Rosário" class="h-28 w-auto" />
+          </a>
+          <div class="text-xs text-on-surface-variant space-y-1 leading-relaxed">
+            <p>CRM-PR 29.253</p>
+            <p>Pediatria · RQE Nº 21.533</p>
+            <p>Alergia e Imunologia · RQE Nº 21.532</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-on-surface-variant pt-1">
+            <span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+            <span>Seg–Sex · 09h às 17h</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Navegação</h4>
+          <ul class="space-y-3 text-sm text-secondary">
+            <li><a href="index.html"       class="hover:text-primary transition-colors">Início</a></li>
+            <li><a href="sobre.html"       class="hover:text-primary transition-colors">Sobre</a></li>
+            <li><a href="publicacoes.html" class="hover:text-primary transition-colors">Publicações</a></li>
+            <li><a href="contato.html"     class="hover:text-primary transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Clínica Prof. Dr. Nelson Rosário</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Tenente+João+Gomes+da+Silva,+226,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Ten. João Gomes da Silva, 226 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554133394486" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3339-4486
+            </a>
+            <a href="https://wa.me/5541999957010?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Cristine%20Ros%C3%A1rio!" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">chat</span>WhatsApp: (41) 99995-7010
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-headline font-semibold mb-6 text-primary">Hospital N. S. das Graças</h4>
+          <div class="space-y-3 text-sm text-secondary">
+            <a href="https://maps.google.com/?q=Rua+Profa.+Rosa+Saporski,+229,+Mercês,+Curitiba,+PR" target="_blank" rel="noopener" class="flex items-start gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">location_on</span>
+              Rua Profa. Rosa Saporski, 229 — Mercês, Curitiba-PR
+            </a>
+            <a href="tel:+554132406521" class="flex items-center gap-2 hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-base">call</span>(41) 3240-6521
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 text-center border-t border-outline-variant/10">
+        <p class="text-xs text-on-surface-variant">
+          © 2025–2026 Dra. Cristine Rosário — Todos os direitos reservados.
+          CRM-PR 29.253 · Pediatria RQE Nº 21.533 · Alergia e Imunologia RQE Nº 21.532
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
